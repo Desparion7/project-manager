@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { ClerkProvider } from '@clerk/nextjs';
 import './globals.css';
 import { siteConfig } from '@/config/site';
 
@@ -23,10 +22,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<ClerkProvider>
-			<html lang='en'>
-				<body className={inter.className}>{children}</body>
-			</html>
-		</ClerkProvider>
+		<html lang='en'>
+			<body className={inter.className}>{children}</body>
+		</html>
 	);
 }
